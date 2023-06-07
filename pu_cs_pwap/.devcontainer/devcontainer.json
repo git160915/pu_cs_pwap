@@ -11,7 +11,13 @@
 			"installMaven": "true",
 			"installGradle": "true"
 		}
-	}
+	},
+
+	"dev.containers.defaultExtensions": [
+		"codezombiech.gitignore"
+	]
+
+	// "mounts": ["source=coursera-vol-1,target=/workspaces/coursera-vol-1,type=volume"]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
