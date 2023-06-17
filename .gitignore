@@ -399,3 +399,7 @@ FodyWeavers.xsd
 
 # Java
 *.javac
+
+# Misc
+.DS_Store
+.gitignore.swp
