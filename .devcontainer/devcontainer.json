@@ -15,7 +15,8 @@
 
 	"dev.containers.defaultExtensions": [
 		"vscjava.vscode-java-pack",
-		"codezombiech.gitignore"
+		"codezombiech.gitignore",
+		"github.vscode-pull-request-github"
 	]
 
 	// "mounts": ["source=coursera-vol-1,target=/workspaces/coursera-vol-1,type=volume"]
