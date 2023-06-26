@@ -17,7 +17,7 @@ public class Birthday {
             bIsDuplicateBirthday = false;
 
             for (int i = 0; i < iListOfFirstDuplicateBirthday.length & !bIsDuplicateBirthday; i++) {
-                iListPeopleEnteredRoom[i] = (int) Math.round(Math.random() * iN);
+                iListPeopleEnteredRoom[i] = (int) (Math.random() * iN);
 
                 for (int j = 0; j < i; j++) {
                     if (iListPeopleEnteredRoom[j] == iListPeopleEnteredRoom[i]) {
