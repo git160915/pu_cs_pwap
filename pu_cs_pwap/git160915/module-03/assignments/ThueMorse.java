@@ -1,5 +1,5 @@
 public class ThueMorse {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         int iN = Integer.parseInt(args[0]);
         int[] iThueMorseSeq = new int[iN];
 
@@ -21,12 +21,6 @@ public class ThueMorse {
                 iThueMorseSeq[i] = (iThueMorseSeq[i - iPrevSeqMultiplier] + 1) % 2;
             }
         }
-
-        for (int i = 0; i < iThueMorseSeq.length; i++) {
-            System.out.print(iThueMorseSeq[i] + "  ");
-        }
-        System.out.println();
-        System.out.println();
 
         for (int i = 0; i < iN; i++) {
             for (int j = 0; j < iN; j++) {
