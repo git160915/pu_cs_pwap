@@ -1,5 +1,5 @@
 public class Minesweeper {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         int iM = Integer.parseInt(args[0]);
         int iN = Integer.parseInt(args[1]);
         int iK = Integer.parseInt(args[2]);
@@ -34,10 +34,12 @@ public class Minesweeper {
             }
         }
 
+        /*
         for (int i = 0; i < iRandomMinesList.length; i++) {
             System.out.print(iRandomMinesList[i] + "  ");
         }
         System.out.println();
+        */
 
         for (int iRow = 0; iRow < cMineSweeperGrid.length; iRow++) {
             for (int iCol = 0; iCol < cMineSweeperGrid[iRow].length; iCol++) {
@@ -47,8 +49,17 @@ public class Minesweeper {
 
         int iTmpRandomMine = 0;
         for (int i = 0; i < iRandomMinesList.length; i++) {
-            iTmpRandomMine = iRandomMinesList[i]-1;
-            cMineSweeperGrid[iTmpRandomMine/iM][iTmpRandomMine%iN] = -1;
+            iTmpRandomMine = iRandomMinesList[i];
+            if (iTmpRandomMine < 0) {
+                iTmpRandomMine = 0;
+            }
+
+            if (iTmpRandomMine >= cMineSweeperGrid[0].length) {
+                cMineSweeperGrid[iTmpRandomMine / cMineSweeperGrid[0].length]
+                                [iTmpRandomMine % cMineSweeperGrid[0].length] = -1;
+            } else {
+                cMineSweeperGrid[0][iTmpRandomMine] = -1;
+            }
         }
 
         for (int iRow = 0; iRow < cMineSweeperGrid.length; iRow++) {
@@ -117,6 +128,5 @@ public class Minesweeper {
             }
             System.out.println();
         }
-        System.out.println();
     }
 }

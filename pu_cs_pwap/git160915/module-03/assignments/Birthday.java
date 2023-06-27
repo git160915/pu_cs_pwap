@@ -1,5 +1,5 @@
 public class Birthday {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         int iN = Integer.parseInt(args[0]);
         int iTrials = Integer.parseInt(args[1]);
         int iNumTrialsCounter = 0;
@@ -16,10 +16,10 @@ public class Birthday {
             // people with random birthday's entering the room
             bIsDuplicateBirthday = false;
 
-            for (int i = 0; i < iListOfFirstDuplicateBirthday.length & !bIsDuplicateBirthday; i++) {
-                iListPeopleEnteredRoom[i] = (int) Math.round(Math.random() * iN);
+            for (int i = 0; i < iListOfFirstDuplicateBirthday.length && !bIsDuplicateBirthday; i++) {
+                iListPeopleEnteredRoom[i] = (int) (Math.random() * iN);
 
-                for (int j = 0; j < i; j++) {
+                for (int j = 0; j < i && !bIsDuplicateBirthday; j++) {
                     if (iListPeopleEnteredRoom[j] == iListPeopleEnteredRoom[i]) {
                         iListOfFirstDuplicateBirthday[i]++;
                         
@@ -27,7 +27,6 @@ public class Birthday {
                         bIsDuplicateBirthday = true;
                     }
                 }
-
             }
 
             iNumTrialsCounter++;
