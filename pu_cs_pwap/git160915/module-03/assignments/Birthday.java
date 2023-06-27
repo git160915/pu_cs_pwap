@@ -29,6 +29,7 @@ public class Birthday {
         while (iNumTrialsCounter < iTrials) {
             // Init variable which will control the loop that generates 
             // people with random birthday's entering the room
+
             bSharedBirthdayExist = false;
 
             bListPeopleEnteredRoom = new boolean[iN + 1];
