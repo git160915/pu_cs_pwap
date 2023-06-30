@@ -3,28 +3,29 @@
 {
 	"name": "Java",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/java:0-17-bullseye",
+	"image": "mcr.microsoft.com/devcontainers/java:1-11-bullseye",
 
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
 			"version": "none",
-			"installMaven": "true",
-			"installGradle": "true"
+			"installMaven": "false",
+			"installGradle": "false"
 		},
-		"ghcr.io/devcontainers/features/desktop-lite:1": {
-			"password": "vscode",
-			"webPort": "6080",
-			"vncPort": "5901"
-		}
+		"ghcr.io/devcontainers/features/desktop-lite:1": {}
 	},
 
+	"forwardPorts": [6080],
+	"portsAttributes": {
+		"6080": {
+			"label": "desktop"
+		}
+	},
+	
 	"dev.containers.defaultExtensions": [
 		"vscjava.vscode-java-pack",
 		"codezombiech.gitignore",
 		"github.vscode-pull-request-github"
 	]
-
-	// "mounts": ["source=coursera-vol-1,target=/workspaces/coursera-vol-1,type=volume"]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
