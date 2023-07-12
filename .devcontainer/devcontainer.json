@@ -25,7 +25,32 @@
 		"vscjava.vscode-java-pack",
 		"codezombiech.gitignore",
 		"github.vscode-pull-request-github"
-	]
+	],
+
+	"remoteUser": "vscode",
+
+	// This is applicable to entire container
+	"containerEnv": {
+		// Set the $CLASSPATH for Java libraries
+		"CLASSPATH": ".:stdlib.jar",	
+
+		// Set $DISPLAY environmnet variable to display GUIs from docker container
+		"DISPLAY": "host.docker.internal:0"	
+	},
+
+	// This is specific to VSCode
+	"remoteEnv": {
+		// Set the $CLASSPATH for Java libraries
+		"CLASSPATH": "${containerEnv:CLASSPATH}:.:stdlib.jar",
+
+		// Set $DISPLAY environmnet variable to display GUIs from docker container
+		"DISPLAY": "host.docker.internal:0"
+	},
+
+	"hostRequirements": {
+		"cpus": 4,
+		"memory": "4gb"
+	}
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
