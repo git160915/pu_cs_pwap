@@ -439,3 +439,8 @@ replay_pid*
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# Project specific
+# module-04
+pu_cs_pwap/git160915/module-04/assignments/DiscreteDistribution.java
+pu_cs_pwap/git160915/module-04/data/
