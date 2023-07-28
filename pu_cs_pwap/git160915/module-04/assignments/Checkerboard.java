@@ -6,7 +6,7 @@ public class Checkerboard {
         
         // Size of the cells in the checkerboard
         // This is simply length of the side of the square
-        double dCellDimension = 1.0/iN;
+        double dCellDimension = 1;
 
         // This is the cell dimension radius
         // Which is really simply half the dimension
@@ -19,13 +19,13 @@ public class Checkerboard {
         // Our scale starts from (0, 0)
         // Think of the x and y axis as follows:
         // (x = 0, y = 0): Bottom left of checkerboard
-        // (x = 1, y = 0): Bottom right of checkerboard
-        // (x = 0, y = 1): Top left of checkerboard
-        // (x = 1, y = 1): Top right of checkerboard
-        StdDraw.setXscale(0.0, +1.0);
-        StdDraw.setYscale(0.0, +1.0);
+        // (x = iN, y = 0): Bottom right of checkerboard
+        // (x = 0, y = iN): Top left of checkerboard
+        // (x = iN, y = iN): Top right of checkerboard
+        StdDraw.setXscale(0.0, (double) iN);
+        StdDraw.setYscale(0.0, (double) iN);
 
-        //StdDraw.enableDoubleBuffering();
+        // StdDraw.enableDoubleBuffering();
 
         // First loop through the cells in the rows/y-axis
         for (int y = iN; y > 0; y--) {
@@ -63,7 +63,7 @@ public class Checkerboard {
             }
         }
 
-        //StdDraw.show();
-        //StdDraw.pause(20);
+        // StdDraw.show();
+        // StdDraw.pause(20);
     }
 }

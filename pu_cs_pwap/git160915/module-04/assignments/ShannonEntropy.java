@@ -1,5 +1,5 @@
 public class ShannonEntropy {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         int iM = Integer.parseInt(args[0]);
         
         // This variable tracks the frequency of integers from StdIn for which 
