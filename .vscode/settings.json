@@ -1,6 +1,7 @@
 {
     "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "pu_cs_pwap/git160915/module-04/misc-assignments/stdlib.jar"
-    ]
+        "lib/*/*.jar",
+        "pu_cs_pwap/git160915/lib/stdlib.jar"
+    ],
+    "java.dependency.packagePresentation": "hierarchical"
 }

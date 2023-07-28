@@ -32,7 +32,7 @@
 	// This is applicable to entire container
 	"containerEnv": {
 		// Set the $CLASSPATH for Java libraries
-		"CLASSPATH": ".:stdlib.jar",	
+		"CLASSPATH": ".:stdlib.jar:/workspaces/coursera/pu_cs_pwap/git160915/lib/stdlib.jar",
 
 		// Set $DISPLAY environmnet variable to display GUIs from docker container
 		"DISPLAY": "host.docker.internal:0"	
@@ -41,7 +41,7 @@
 	// This is specific to VSCode
 	"remoteEnv": {
 		// Set the $CLASSPATH for Java libraries
-		"CLASSPATH": "${containerEnv:CLASSPATH}:.:stdlib.jar",
+		"CLASSPATH": "${containerEnv:CLASSPATH}",
 
 		// Set $DISPLAY environmnet variable to display GUIs from docker container
 		"DISPLAY": "host.docker.internal:0"

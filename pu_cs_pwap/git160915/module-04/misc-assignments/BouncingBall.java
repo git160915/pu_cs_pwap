@@ -22,7 +22,7 @@ public class BouncingBall {
 
             StdDraw.setPenColor(StdDraw.BLACK);
             StdDraw.filledCircle(rx, ry, radius);
-            StdDraw.show(20);
+            StdDraw.show();
         }
     }
 }
