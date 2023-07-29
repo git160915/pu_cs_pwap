@@ -28,8 +28,8 @@ public class FourierSpikePlot {
         double[] dStepsList;
         double[] dFourierSpikeList = new double[iNumSamples];
 
-        // StdDraw.setXscale(-10.0, 10.0);
-        // StdDraw.setYscale(-1.00, 1.00);
+        StdDraw.setXscale(-10.0, 10.0);
+        StdDraw.setYscale(-1.00, 1.00);
 
         dStepsList = linespace(dStart, dEnd, iNumSamples);
 

@@ -26,6 +26,7 @@ sudo apt-get install -y fonts-powerline
 
 # Install powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+# sed -i 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"powerlevel10k\/powerlevel10k\"/g' ~/.zshrc
 sed -i 's/ZSH_THEME=\"devcontainers\"/ZSH_THEME=\"powerlevel10k\/powerlevel10k\"/g' ~/.zshrc
 
 # Download zsh-autosuggestions
