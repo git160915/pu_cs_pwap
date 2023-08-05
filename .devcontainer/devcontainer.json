@@ -3,23 +3,26 @@
 {
 	"name": "Java",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/java:1-11-bullseye",
+	// "image": "mcr.microsoft.com/devcontainers/java:1-11-bullseye",
+	"build": {"dockerfile": "Dockerfile.java-jdk11-11-7-bullseye"},
 
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
 			"version": "none",
 			"installMaven": "false",
 			"installGradle": "false"
-		},
-		"ghcr.io/devcontainers/features/desktop-lite:1": {}
+		}
+		//"ghcr.io/devcontainers/features/desktop-lite:1": {}
 	},
 
+	/*
 	"forwardPorts": [6080],
 	"portsAttributes": {
 		"6080": {
 			"label": "desktop"
 		}
 	},
+	*/
 	
 	"dev.containers.defaultExtensions": [
 		"vscjava.vscode-java-pack",
@@ -32,7 +35,7 @@
 	// This is applicable to entire container
 	"containerEnv": {
 		// Set the $CLASSPATH for Java libraries
-		"CLASSPATH": ".:stdlib.jar",	
+		"CLASSPATH": ".:stdlib.jar:/workspaces/coursera/pu_cs_pwap/git160915/lib/stdlib.jar",
 
 		// Set $DISPLAY environmnet variable to display GUIs from docker container
 		"DISPLAY": "host.docker.internal:0"	
@@ -41,7 +44,7 @@
 	// This is specific to VSCode
 	"remoteEnv": {
 		// Set the $CLASSPATH for Java libraries
-		"CLASSPATH": "${containerEnv:CLASSPATH}:.:stdlib.jar",
+		"CLASSPATH": "${containerEnv:CLASSPATH}",
 
 		// Set $DISPLAY environmnet variable to display GUIs from docker container
 		"DISPLAY": "host.docker.internal:0"
