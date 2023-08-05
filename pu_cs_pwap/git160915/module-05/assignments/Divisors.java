@@ -6,6 +6,14 @@ public class Divisors {
         int iB = Math.abs(b);
         int iGCD = 0;
 
+        if (iA == 0 && iB == 0) {
+            return 0;
+        } else if (iA == 0) {
+            return iB;
+        } else if (iB == 0) {
+            return iA;
+        }
+
         while (iB != 0) {
             iGCD = iB;
             iB = iA % iB;
@@ -17,6 +25,8 @@ public class Divisors {
 
     // Returns the least common multiple of a and b.
     public static int lcm(int a, int b) {
+        if (a == 0 || b == 0) return 0;
+
         return (Math.abs(a) / gcd(a, b)) * Math.abs(b);
     }
 
