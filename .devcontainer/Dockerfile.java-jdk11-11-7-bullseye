@@ -2,7 +2,7 @@
 FROM debian:11.7-slim
 
 # Set the working directory to /workspace
-WORKDIR /workspace
+WORKDIR /workspaces
 
 ARG USERNAME=vscode
 ARG USER_UID=1000
