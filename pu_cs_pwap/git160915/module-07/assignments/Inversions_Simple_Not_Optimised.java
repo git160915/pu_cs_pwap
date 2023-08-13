@@ -18,13 +18,11 @@ public class Inversions_Simple_Not_Optimised {
     // Return a permutation of length n with exactly k inversions.
     public static int[] generate(int n, long k) {
         int[] iPermutation = new int[n];
-        int[] iPermutationTmp = new int[n];
         long lInversions = 0;
         int iTmpNum = 0;
 
         for (int i = 0; i < iPermutation.length; i++) {
             iPermutation[i] = i;
-            iPermutationTmp[i] = i;
         }
         
         lInversions = count(iPermutation);
