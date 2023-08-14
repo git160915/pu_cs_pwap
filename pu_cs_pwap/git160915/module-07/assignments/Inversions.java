@@ -21,7 +21,6 @@ public class Inversions {
         int[] iPermutationTmp = new int[n];
         long lInversionCal = k;
         int iNumberToShift = 0;
-        long lInversions = 0;
         int iTmpNum = 0;
 
         for (int i = 0; i < iPermutation.length; i++) {
