@@ -7,12 +7,6 @@ public class Ramanujan {
         int iCountSumCube = 0;
         long lA, lC, lE, iBTmp = 0, iDTmp = 0;
         double dB, dD, dF;
-        boolean bPrintDebug = false;
-
-
-        if (bPrintDebug) {
-            StdOut.println(dUpperLimit);
-        }
 
         while ((iRunningNum < dUpperLimit) && (iCountSumCube <= 2)) {
             iRunningNum++;
@@ -27,10 +21,6 @@ public class Ramanujan {
 
                 if (dB % 1 == 0) {
                     iCountSumCube++;
-
-                    if (bPrintDebug) {
-                        StdOut.println(iRunningNum + ", a: " + lA + ", b: " + dB + ", " + iCountSumCube);
-                    }
                 }
             } else if (iCountSumCube == 1) {
                 // Generate first cube
@@ -43,10 +33,6 @@ public class Ramanujan {
                 if (dD % 1 == 0) {
                     if (lC != iBTmp) {
                         iCountSumCube++;
-
-                        if (bPrintDebug) {
-                            StdOut.println(iRunningNum + ", c: " + lC + ", d: " + dD + ", " + iCountSumCube);
-                        }
                     }
                 }
             } else {
@@ -59,16 +45,12 @@ public class Ramanujan {
                 if (dF % 1 == 0) {
                     if (lE != iBTmp && lE != iDTmp) {
                         iCountSumCube++;
-                        
-                        if (bPrintDebug) {
-                            StdOut.println(iRunningNum + ", e: " + lE + ", f: " + dF + ", " + iCountSumCube);
-                        }
                     }
                 }
             }
         }
 
-        return (iCountSumCube == 2);
+        return (iCountSumCube == 2 || iCountSumCube == 3);
     }
 
     // Takes a long integer command-line arguments n and prints true if
