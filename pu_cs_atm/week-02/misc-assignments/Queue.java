@@ -1,4 +1,6 @@
-public class Queue<Item> {
+import java.util.Iterator;
+
+public class Queue<Item> implements Iterable<Item> {
 
     // represents the start of the queue (this is the one we will pop)
     private Node firstNode;
@@ -33,7 +35,7 @@ public class Queue<Item> {
         lastNode = new Node();
         lastNode.item = item;
         
-        if (secondLastNode == null) {
+        if (isEmpty()) {
             firstNode = lastNode;
         } else {
             secondLastNode.next = lastNode;
@@ -63,6 +65,29 @@ public class Queue<Item> {
         return item;
     }
 
+    public Iterator<Item> iterator() {
+        return new ListIterator();
+    }
+
+    public class ListIterator implements Iterator<Item> {
+
+        Node current = firstNode;
+
+        public boolean hasNext() {
+            return current != null;
+        }
+
+        public Item next() {
+            Item item = current.item;
+            current = current.next;
+            return item;
+        }
+
+        public void remove() {
+            return;
+        }
+    }
+
     public static void main(String[] args) {
         Queue<String> queue = new Queue<String>();
 
@@ -78,6 +103,10 @@ public class Queue<Item> {
             } else {
                 queue.enqueue(word);
             }
+        }
+
+        for (String s : queue) {
+            StdOut.println(s + " ");
         }
 
         StdOut.println();
