@@ -35,7 +35,7 @@
 	// This is applicable to entire container
 	"containerEnv": {
 		// Set the $CLASSPATH for Java libraries
-		"CLASSPATH": ".:stdlib.jar:/workspaces/coursera/pu_cs_pwap/git160915/lib/stdlib.jar",
+		"CLASSPATH": ".:stdlib.jar:/workspaces/coursera/lib/stdlib.jar:/workspaces/coursera/lib/postgresql-42.6.0.jar",
 
 		// Set $DISPLAY environmnet variable to display GUIs from docker container
 		"DISPLAY": "host.docker.internal:0"	
@@ -53,7 +53,11 @@
 	"hostRequirements": {
 		"cpus": 4,
 		"memory": "4gb"
-	}
+	},
+
+	"runArgs": [
+		"--network=default-bridge"
+	]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],

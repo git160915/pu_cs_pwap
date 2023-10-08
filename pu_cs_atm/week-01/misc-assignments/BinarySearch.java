@@ -30,7 +30,8 @@ public class BinarySearch {
         double dStart = System.currentTimeMillis() / 1000.0;
 
         // Need to sort the list before we can perform a Binary Search
-        Arrays.sort(sWordsList);
+        // Arrays.sort(sWordsList);
+        MergeSortV2.sort(sWordsList);
 
         for (int i = 0; i < 10 * iWordsListCount; i++) {
             String sKey = sWordsList[StdRandom.uniformInt(iWordsListCount)];
