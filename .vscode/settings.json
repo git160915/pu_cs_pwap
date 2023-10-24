@@ -6,5 +6,7 @@
             "lib/postgresql-42.6.0.jar"
         ]
     },
-    "java.dependency.packagePresentation": "hierarchical"
+    "java.dependency.packagePresentation": "hierarchical",
+    "maven.view": "hierarchical",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
